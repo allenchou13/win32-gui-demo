@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.1)
+
+project(win-demo)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
+
+aux_source_directory(. SRC_FILES)
+
+add_executable(win-demo ${SRC_FILES})
